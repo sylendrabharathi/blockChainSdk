@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/chainHero/heroes-service/blockchain"
+	"github.com/sylendrabharathi/blockChainSdk/blockchain"
 )
 
 func main() {
@@ -13,12 +13,12 @@ func main() {
 	fSetup := blockchain.FabricSetup{
 		// Channel parameters
 		ChannelID:     "chainhero",
-		ChannelConfig: os.Getenv("GOPATH") + "/src/github.com/chainHero/heroes-service/fixtures/artifacts/chainhero.channel.tx",
+		ChannelConfig: os.Getenv("GOPATH") + "/src/github.com/sylendrabharathi/blockChainSdk/fixtures/artifacts/chainhero.channel.tx",
 
 		// Chaincode parameters
 		ChainCodeID:     "heroes-service",
 		ChaincodeGoPath: os.Getenv("GOPATH"),
-		ChaincodePath:   "github.com/chainHero/heroes-service/chaincode/",
+		ChaincodePath:   "github.com/sylendrabharathi/blockChainSdk/chaincode/",
 		OrgAdmin:        "Admin",
 		OrgName:         "Org1",
 		ConfigFile:      "config.yaml",
